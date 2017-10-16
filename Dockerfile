@@ -1,12 +1,5 @@
-FROM centos:7.3.1611
-
-# Install java
-RUN  yum update -y && \
-     yum install -y java-1.8.0-openjdk-devel && \
-     yum clean -y all
-
-# Enviroment variable for java sdk
-ENV JAVA_HOME="/etc/alternatives/java_sdk"
+# Use existing java image
+FROM java
 
 # Download apache maven
 RUN curl -L -o "/opt/apache-maven-3.5.0-bin.tar.gz" http://www-us.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz

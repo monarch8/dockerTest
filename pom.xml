@@ -49,6 +49,23 @@
           </archive>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>net.nicoulaj.maven.plugins</groupId>
+        <artifactId>checksum-maven-plugin</artifactId>
+        <version>1.6</version>
+
+        <executions>
+          <execution>
+            <goals>
+              <goal>artifacts</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <algorithm>SHA-256</algorithm>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
